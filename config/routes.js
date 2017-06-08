@@ -34,7 +34,11 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
+  'get /api': {
+    view: 'api'
+  },
+  'post /api': 'ApiController.showMeasures',
 
   /***************************************************************************
   *                                                                          *
