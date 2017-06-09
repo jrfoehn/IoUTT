@@ -32,13 +32,15 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
+  'get /': {
     view: 'homepage'
   },
+  'get /': 'DataController.display',
   'get /api': {
     view: 'api'
   },
-  'post /api': 'ApiController.showMeasures',
+  'post /api': 'DataController.create',
+  'post /api/show': 'DataController.getMeasures',
 
   /***************************************************************************
   *                                                                          *
