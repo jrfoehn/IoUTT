@@ -15,7 +15,7 @@ module.exports = {
     var params = req.params.all();
     var DateToday, today;
     today = new Date();
-    Data.create({temperature:params.temperature, waterlevel:params.waterlevel, humidity:params.humidity, date:today}).exec(function (err, finn){
+    Data.create({temperature:params.temperature, waterlevel:params.waterlevel, ph:params.ph, date:today}).exec(function (err, finn){
       if (err) { return res.serverError(err); }
 
       sails.log('Finn\'s id is:', finn.id);

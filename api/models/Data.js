@@ -17,10 +17,10 @@ module.exports = {
       required: true,
       columnName: 'waterlevel(cm)'
     },
-    humidity: {
+    ph: {
       type: 'INTEGER',
       required: true,
-      columnName: 'humidity(%)'
+      columnName: 'ph'
     },
     date: {
       type: 'DATETIME',

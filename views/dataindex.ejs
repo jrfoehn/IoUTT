@@ -68,7 +68,7 @@
                 <td>Date</td>
                 <td>Température (°C)</td>
                 <td>Niveau d'eau (cm)</td>
-                <td>Humidité (%)</td>
+                <td>Ph</td>
               </thead>
               <tbody id="results">
 
@@ -77,12 +77,16 @@
                     <tr>
                         <% var monthNames = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre"]; %>
                         <% var dateObj = new Date(data[i].createdAt); %>
-                        <% var date = dateObj.getDate() + " " + monthNames[dateObj.getMonth()] + " " + dateObj.getFullYear() + " à " + dateObj.getHours()+ "h" + dateObj.getMinutes() + "min et " + dateObj.getSeconds() + "secs"; %>
+                        <% var minutes =  dateObj.getMinutes(); %>
+                        <% if(minutes < 10) { %>
+                          <% minutes = "0" + minutes; %>
+                        <% } %>
+                        <% var date = dateObj.getDate() + " " + monthNames[dateObj.getMonth()] + " " + dateObj.getFullYear() + " à " + dateObj.getHours()+ "h" + minutes+ "min et " + dateObj.getSeconds() + "secs"; %>
 
                         <td> <%= date %> </td>
                         <td> <%= data[i].temperature %> </td>
                         <td> <%= data[i].waterlevel %> </td>
-                        <td> <%= data[i].humidity %> </td>
+                        <td> <%= data[i].ph %> </td>
                     </tr>
                   <% } %>
                 <% } else { %>
