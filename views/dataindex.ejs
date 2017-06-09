@@ -4,7 +4,6 @@
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 
-
 <script type="text/javascript">
 		$(document).ready(function() {
 				$('#dataTable').DataTable({
@@ -192,16 +191,15 @@
 					</div>
 				</div>
 
-				<div class="content table-responsive">
-						<table class="table table-hover table-striped" id="dataTable">
-							<thead>
-								<td>Date</td>
-								<td>Température (°C)</td>
-								<td>Niveau d'eau (cm)</td>
-								<td>Ph</td>
-							</thead>
-							<tbody id="results">
-
+        <div class="content table-responsive">
+            <table class="table table-hover table-striped" id="dataTable">
+              <thead>
+                <th>Date</th>
+                <th>Température (°C)</th>
+                <th>Niveau d'eau (cm)</th>
+                <th>Ph</th>
+              </thead>
+              <tbody id="results">
 								 <% if(data.length !=0) { %>
 									<% for(var i=0; i<data.length; i++) { %>
 										<tr>
