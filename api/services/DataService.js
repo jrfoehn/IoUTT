@@ -8,7 +8,7 @@ module.exports = {
       if (err) return res.serverError(err);
       collection.find({},{}).toArray(function (err, results) {
         if (err) return res.serverError(err);
-        // return res.json(results);
+        return res.json(results);
       });
     });
   }

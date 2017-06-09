@@ -35,7 +35,7 @@ module.exports.routes = {
   'get /': {
     view: 'homepage'
   },
-  'get /': 'DataController.display',
+  // 'get /': 'DataController.display',
   'get /api': {
     view: 'api'
   },
