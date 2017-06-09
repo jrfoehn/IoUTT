@@ -38,6 +38,7 @@
     "rxjs": "5.0.1",
     "sails": "~0.12.13",
     "sails-disk": "~0.10.9",
+    "sails-mongo": "^0.12.2",
     "systemjs": "0.19.40",
     "zone.js": "^0.8.4"
   },

@@ -31,6 +31,11 @@ module.exports = {
       });
     });
   },
+  index: function(req, res) {
+    Data.find({}, function(err, found){
+       res.view( 'dataindex', {data: found} );
+    });
+  }
 
 };
 

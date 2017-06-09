@@ -39,6 +39,9 @@ module.exports.routes = {
   'get /api': {
     view: 'api'
   },
+
+  'get /api/index': 'DataController.index',
+
   'post /api': 'DataController.create',
   'post /api/show': 'DataController.getMeasures',
 
