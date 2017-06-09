@@ -75,14 +75,13 @@
                  <% if(data.length !=0) { %>
                   <% for(var i=0; i<data.length; i++) { %>
                     <tr>
-
                         <% var monthNames = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre"]; %>
                         <% var dateObj = new Date(data[i].createdAt); %>
                         <% var date = dateObj.getDate() + " " + monthNames[dateObj.getMonth()] + " " + dateObj.getFullYear() + " à " + dateObj.getHours()+ "h" + dateObj.getMinutes() + "min et " + dateObj.getSeconds() + "secs"; %>
 
                         <td> <%= date %> </td>
-                        <td> <%= data[i].temperature %> °C </td>
-                        <td> <%= data[i].waterlevel %> % </td>
+                        <td> <%= data[i].temperature %> </td>
+                        <td> <%= data[i].waterlevel %> </td>
                         <td> <%= data[i].humidity %> </td>
                     </tr>
                   <% } %>

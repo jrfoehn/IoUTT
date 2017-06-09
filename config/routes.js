@@ -32,15 +32,14 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  'get /': {
-    view: 'homepage'
-  },
+  'get /': 'DataController.index',
+
   // 'get /': 'DataController.display',
   'get /api': {
     view: 'api'
   },
 
-  'get /api/index': 'DataController.index',
+  
 
   'post /api': 'DataController.create',
   'post /api/show': 'DataController.getMeasures',
