@@ -1,0 +1,25 @@
+/**
+ * Created by jrfoehn on 6/12/17.
+ */
+{
+  "mongodb"{
+  "host": "localhost",
+    "port": 27017,
+    "username": false,
+    "password": false,
+    "db": "IoUTT"
+},
+  "s3": {
+    "key": "AKIAJIQILPODDUDKZKWQ",
+    "secret": "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",
+    "bucket": "lo10foehn",
+    "destination": "/IoUTT_backup",
+    "encrypt": true,
+    "region": "eu-west"
+},
+  "cron": {
+    "time": "00:00",
+    "timezone": "Europe/Paris"
+}
+}
+
