@@ -218,7 +218,7 @@
 												<% if(minutes < 10) { %>
                           <% minutes = "0" + minutes; %>
                         <% } %>
-                        <% if(minutes < 10) { %>
+                        <% if(day < 10) { %>
 													<% day = "0" + day; %>
 												<% } %>
 												<% var date = day + " " + monthNames[dateObj.getMonth()] + " " + dateObj.getFullYear() + " à " + dateObj.getHours()+ "h" + minutes+ "min et " + dateObj.getSeconds() + "secs"; %>
